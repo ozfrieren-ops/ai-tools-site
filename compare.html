@@ -9,6 +9,24 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
         body { font-family: 'Noto Sans JP', sans-serif; }
         .table-header { background-color: #3b82f6; color: white; }
+
+        /* ====== モバイル最適化CSS: 表を非表示にし、縦型カードを表示 ====== */
+        @media (max-width: 767px) {
+            /* モバイル時にメインの表を非表示にする */
+            .main-table-container { display: none; }
+            /* モバイル時に縦型カードを表示する */
+            .mobile-cards-container { display: block !important; }
+
+            /* カード内の項目をデザイン */
+            .mobile-card .feature {
+                font-weight: bold;
+                color: #2563eb; /* Blue 600 */
+                border-bottom: 1px dashed #d1d5db; /* Gray 300 */
+                padding-bottom: 4px;
+                margin-top: 12px;
+            }
+        }
+        /* ====== /モバイル最適化CSS ====== */
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 pt-16">
@@ -37,7 +55,7 @@
 
             <h2 class="text-2xl font-bold mt-10 mb-6 text-blue-600">主要AIツール3社の徹底比較チャート</h2>
             
-            <div class="overflow-x-auto shadow-lg rounded-lg border">
+            <div class="overflow-x-auto shadow-lg rounded-lg border main-table-container md:block hidden">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead>
                         <tr>
@@ -82,7 +100,47 @@
                     </tbody>
                 </table>
             </div>
-            
+
+            <div class="mobile-cards-container hidden space-y-8">
+                
+                <div class="mobile-card bg-white p-5 rounded-xl shadow-lg border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-600 border-b pb-2 mb-2">ChatGPT Plus</h3>
+                    <div class="feature">得意な分野:</div>
+                    <p class="text-sm text-gray-700">汎用性、プログラミング、データ分析</p>
+                    <div class="feature">日本語精度:</div>
+                    <p class="text-sm text-gray-700">非常に高い (GPT-4利用時)</p>
+                    <div class="feature">料金目安:</div>
+                    <p class="text-sm text-gray-700">月額約$20</p>
+                    <div class="feature">アフィリエイト:</div>
+                    <a href="#" class="text-red-500 hover:underline font-bold block mt-1">提携サイトへ &rarr;</a>
+                </div>
+
+                <div class="mobile-card bg-white p-5 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mb-2">Notion AI</h3>
+                    <div class="feature">得意な分野:</div>
+                    <p class="text-sm text-gray-700">文書整理、議事録作成、タスク管理</p>
+                    <div class="feature">日本語精度:</div>
+                    <p class="text-sm text-gray-700">高い (文書内での修正が得意)</p>
+                    <div class="feature">料金目安:</div>
+                    <p class="text-sm text-gray-700">月額約$10 (Notion利用料別)</p>
+                    <div class="feature">アフィリエイト:</div>
+                    <a href="#" class="text-red-500 hover:underline font-bold block mt-1">提携サイトへ &rarr;</a>
+                </div>
+
+                <div class="mobile-card bg-white p-5 rounded-xl shadow-lg border border-green-200">
+                    <h3 class="text-xl font-bold text-green-700 border-b pb-2 mb-2">国産AIライティング</h3>
+                    <div class="feature">得意な分野:</div>
+                    <p class="text-sm text-gray-700">ブログ記事、セールスライティング</p>
+                    <div class="feature">日本語精度:</div>
+                    <p class="text-sm text-gray-700">ネイティブレベルの自然さ</p>
+                    <div class="feature">料金目安:</div>
+                    <p class="text-sm text-gray-700">月額5,000円〜 (文字数従量制あり)</p>
+                    <div class="feature">アフィリエイト:</div>
+                    <a href="https://rpx.a8.net/svt/ejp?a8mat=45IFX3+4ASQ2A+2HOM+6OHEQ&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhsc%2F0ea81083.052227c6.0ea81082.5814e1a7%2Fa25112353673_45IFX3_4ASQ2A_2HOM_6OHEQ" target="_blank" rel="nofollow" class="text-red-500 hover:underline font-bold block mt-1">提携サイトへ &rarr;</a>
+                    <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=45IFX3+4ASQ2A+2HOM+6OHEQ" alt="" class="mt-2">
+                </div>
+
+            </div>
             <h2 class="text-2xl font-bold mt-12 mb-6 text-blue-600">結論：目的別おすすめチャート</h2>
             <div class="border-4 border-yellow-400 p-6 rounded-xl bg-yellow-50/70 space-y-4">
                 <p class="font-bold text-lg">✅ おすすめ結論</p>
