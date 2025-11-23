@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【AI敬語表現レベル検証】ChatGPT/Notion AI/国産AI比較 - ビジネス文書での違和感と修正テクニック</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .table-header { background-color: #3b82f6; color: white; }
+        .keigo-test-bg { background-color: #f0f9ff; } /* Blue 50 */
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 pt-16">
+
+    <header class="w-full py-4 px-6 bg-white shadow-md flex justify-between items-center fixed top-0 z-50">
+        <div class="text-xl font-bold text-blue-600"><a href="index.html">AI Tool Navi</a></div>
+        <nav>
+            <a href="index.html" class="px-4 py-2 text-gray-600 hover:text-blue-600 transition">ホーム</a>
+            <a href="compare.html" class="px-4 py-2 text-blue-600 font-semibold border-b-2 border-blue-600 transition">比較記事</a>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto py-12 px-6">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 border-b pb-4">
+            「お客様に失礼はないか？」 AIの敬語表現レベルを徹底検証！
+        </h1>
+        
+        <div class="prose max-w-none">
+            <p class="text-lg mb-6">
+                AIにビジネスメールや提案書を書かせたとき、「なんだか違和感のある敬語表現だ...」と感じたことはありませんか？
+            </p>
+            <p class="text-gray-600 mb-8">
+                本記事では、**ChatGPT (GPT-4)**、**Notion AI**、そして**国産AIライティングツール**の3つを対象に、実際のビジネスシーンで求められる敬語レベルを徹底的に比較検証しました。
+            </p>
+
+            <h2 class="text-2xl font-bold mt-10 mb-4 text-blue-600 border-l-4 border-blue-600 pl-3">
+                検証方法：厳選した「ビジネスシーン」のプロンプト
+            </h2>
+            <p class="mb-4 text-gray-700">
+                公平性を保つため、以下の共通プロンプトを使用し、それぞれのAIに**「謝罪と提案」**という高度な敬語スキルが求められるタスクを実行させます。
+            </p>
+            
+            <div class="bg-gray-100 p-4 rounded-lg border-l-4 border-gray-400 mb-8 font-mono text-sm">
+                <strong>【検証プロンプトの公開】</strong><br>
+                「現在遅延している新製品Aの納期について、顧客に謝罪するメールを作成してください。納期が遅れた理由を簡潔に伝えつつ、代替案として既存製品Bの割引導入を丁寧に提案してください。」
+            </div>
+            
+            <h2 class="text-2xl font-bold mt-10 mb-6 text-blue-600 border-l-4 border-blue-600 pl-3">
+                生成結果比較：敬語レベルチェックチャート
+            </h2>
+
+            <div class="overflow-x-auto shadow-lg rounded-lg border mb-8">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider table-header">評価基準</th>
+                            <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider table-header">ChatGPT Plus (GPT-4)</th>
+                            <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider table-header">Notion AI</th>
+                            <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider table-header">国産AIライティング</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-4 py-4 whitespace-nowrap font-semibold">敬語レベルの総合評価</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">◎ ほぼ完璧</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">△ 定番表現はOK</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">○ 細部で自然さあり</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 whitespace-nowrap font-semibold">謙譲語/尊敬語の使い分け</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">正確（「拝見する」「ご覧になる」等）</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">単純な表現に留まる</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">高い精度で使い分けを実施</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 whitespace-nowrap font-semibold">クッション言葉の自然さ</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">豊富で適切な箇所に挿入</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">挿入されないことが多い</td>
+                            <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-500">過剰にならず自然な頻度</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-12 mb-6 text-blue-600 border-l-4 border-blue-600 pl-3">
+                結論：ビジネスシーンで最も優秀なAIは？
+            </h2>
+            <div class="border-4 border-blue-600 p-6 rounded-xl keigo-test-bg space-y-4">
+                <p class="font-bold text-xl text-gray-900">✅ 総合評価</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>**最高の汎用性と修正力**を求めるなら: **ChatGPT Plus** (生成後に微修正を加える前提)</li>
+                    <li>**Notionユーザー**で、手軽に丁寧な文書を作成するなら: **Notion AI** (データベースとの連携が強み)</li>
+                    <li>**修正なしで即利用できる日本語**を求めるなら: **国産AIライティングツール** (日本特有のニュアンスに強い)</li>
+                </ul>
+            </div>
+
+            <p class="text-lg mt-8 text-center">
+                各ツールの料金体系やその他の機能を詳しく知りたい方は、以下の**徹底比較記事**をご覧ください。
+            </p>
+            
+            <div class="text-center mt-6">
+                <a href="compare.html" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition shadow-lg">
+                    全AIツール徹底比較チャートへ &rarr;
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center mt-12">
+        <p class="text-sm opacity-60">&copy; 2025 AI Tool Navi. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
